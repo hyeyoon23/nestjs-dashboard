@@ -11,6 +11,7 @@ import { Button } from "./button";
 import { useActionState } from "react";
 import { authenticate } from "@/app/lib/actions";
 import { useSearchParams } from "next/navigation";
+import { Metadata } from "next";
 
 export default function LoginForm() {
   const searchParams = useSearchParams();
@@ -87,3 +88,7 @@ export default function LoginForm() {
     </form>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Login",
+};
